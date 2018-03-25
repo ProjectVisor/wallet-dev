@@ -1,0 +1,487 @@
+ body {
+	margin: 0;
+	padding: 0;
+ }
+ 
+ #background 
+{ 
+	 left: 0px; 
+	 top: 0px; 
+	 position: relative; 
+	 margin-left: auto; 
+	 margin-right: auto; 
+	 width: 2560px;
+	 height: 1672px; 
+	 overflow: hidden;
+	 z-index:0;
+	} 
+
+ #Rectangle4 
+{ 
+	 left: -45px; 
+	 top: 392px; 
+	 position: absolute; 
+	 width: 2622px;
+	 height: 1388px;
+	 z-index:1;
+} 
+
+ #Layer3 
+{ 
+	 left: -2663px; 
+	 top: -502px; 
+	 position: absolute; 
+	 width: 5326px;
+	 height: 2662px;
+	 z-index:2;
+} 
+
+ #WalletOverview 
+{ 
+	 left: 79px; 
+	 top: 385px; 
+	 position: absolute; 
+	 width: 459px;
+	 height: 53px;
+	 z-index:3;
+} 
+
+ #Rectangle2 
+{ 
+	 left: -58px; 
+	 top: -369px; 
+	 position: absolute; 
+	 width: 2702px;
+	 height: 685px;
+	 z-index:4;
+} 
+
+ #Layer1 
+{ 
+	 left: -1432px; 
+	 top: -709px; 
+	 position: absolute; 
+	 width: 2048px;
+	 height: 1536px;
+	 z-index:5;
+} 
+
+ #Layer2copy2 
+{ 
+	 left: 2284px; 
+	 top: -39px; 
+	 position: absolute; 
+	 width: 283px;
+	 height: 541px;
+	 z-index:6;
+} 
+
+ #Layer1copy2 
+{ 
+	 left: 245px; 
+	 top: -665px; 
+	 position: absolute; 
+	 width: 2098px;
+	 height: 1536px;
+	 z-index:7;
+} 
+
+ #OverviewSendReceiv 
+{ 
+	 left: 152px; 
+	 top: 250px; 
+	 position: absolute; 
+	 width: 1527px;
+	 height: 25px;
+	 z-index:8;
+} 
+
+ #Rectangle5 
+{ 
+	 left: 78px; 
+	 top: 310px; 
+	 position: absolute; 
+	 width: 270px;
+	 height: 6px;
+	 z-index:9;
+} 
+
+ #Layer2 
+{ 
+	 left: 894px; 
+	 top: -154px; 
+	 position: absolute; 
+	 width: 774px;
+	 height: 485px;
+	 z-index:10;
+} 
+
+ #RoundedRectangle1 
+{ 
+	 left: 733px; 
+	 top: 61px; 
+	 position: absolute; 
+	 width: 873px;
+	 height: 102px;
+	 z-index:11;
+} 
+
+ #RoundedRectangle1cop 
+{ 
+	 left: 1659px; 
+	 top: 61px; 
+	 position: absolute; 
+	 width: 755px;
+	 height: 102px;
+	 z-index:12;
+} 
+
+ #Youraddressis5G45DL0 
+{ 
+	 left: 766px; 
+	 top: 97px; 
+	 position: absolute; 
+	 width: 816px;
+	 height: 36px;
+	 z-index:13;
+} 
+
+ #ISOR 
+{ 
+	 left: 167px; 
+	 top: 95px; 
+	 position: absolute; 
+	 width: 134px;
+	 height: 39px;
+	 z-index:14;
+} 
+
+ #Shape4 
+{ 
+	 left: 84px; 
+	 top: 77px; 
+	 position: absolute; 
+	 width: 83px;
+	 height: 72px;
+	 z-index:15;
+} 
+
+ #RoundedRectangle3 
+{ 
+	 left: 76px; 
+	 top: 512px; 
+	 position: absolute; 
+	 width: 1581px;
+	 height: 518px;
+	 z-index:16;
+} 
+
+ #RoundedRectangle2cop 
+{ 
+	 left: 1708px; 
+	 top: 513px; 
+	 position: absolute; 
+	 width: 769px;
+	 height: 518px;
+	 z-index:17;
+} 
+
+ #RoundedRectangle2cop_0 
+{ 
+	 left: 77px; 
+	 top: 1074px; 
+	 position: absolute; 
+	 width: 769px;
+	 height: 518px;
+	 z-index:18;
+} 
+
+ #RoundedRectangle2cop_1 
+{ 
+	 left: 893px; 
+	 top: 1074px; 
+	 position: absolute; 
+	 width: 769px;
+	 height: 518px;
+	 z-index:19;
+} 
+
+ #RoundedRectangle2cop_2 
+{ 
+	 left: 1708px; 
+	 top: 1074px; 
+	 position: absolute; 
+	 width: 769px;
+	 height: 518px;
+	 z-index:20;
+} 
+
+ #Layer5copy 
+{ 
+	 left: 1656px; 
+	 top: 1074px; 
+	 position: absolute; 
+	 width: 920px;
+	 height: 517px;
+	 z-index:21;
+} 
+
+ #Ellipse1 
+{ 
+	 left: 1600px; 
+	 top: 566px; 
+	 position: absolute; 
+	 width: 15px;
+	 height: 16px;
+	 z-index:22;
+} 
+
+ #Ellipse1copy 
+{ 
+	 left: 1600px; 
+	 top: 587px; 
+	 position: absolute; 
+	 width: 15px;
+	 height: 16px;
+	 z-index:23;
+} 
+
+ #Ellipse1copy2 
+{ 
+	 left: 1600px; 
+	 top: 608px; 
+	 position: absolute; 
+	 width: 15px;
+	 height: 16px;
+	 z-index:24;
+} 
+
+ #Viewmylatesttransact 
+{ 
+	 left: 141px; 
+	 top: 930px; 
+	 position: absolute; 
+	 width: 558px;
+	 height: 42px;
+	 z-index:25;
+} 
+
+ #Layer7 
+{ 
+	 left: 718px; 
+	 top: 926px; 
+	 position: absolute; 
+	 width: 23px;
+	 height: 44px;
+	 z-index:26;
+} 
+
+ #MYVISORBALANCE 
+{ 
+	 left: 247px; 
+	 top: 576px; 
+	 position: absolute; 
+	 width: 403px;
+	 height: 32px;
+	 z-index:27;
+} 
+
+ #Layer8copy 
+{ 
+	 left: 143px; 
+	 top: 559px; 
+	 position: absolute; 
+	 width: 66px;
+	 height: 61px;
+	 z-index:28;
+} 
+
+ #SENDXVR 
+{ 
+	 left: 231px; 
+	 top: 1132px; 
+	 position: absolute; 
+	 width: 204px;
+	 height: 32px;
+	 z-index:29;
+} 
+
+ #Layer9 
+{ 
+	 left: 132px; 
+	 top: 1119px; 
+	 position: absolute; 
+	 width: 69px;
+	 height: 53px;
+	 z-index:30;
+} 
+
+ #Layer9copy 
+{ 
+	 left: 945px; 
+	 top: 1119px; 
+	 position: absolute; 
+	 width: 69px;
+	 height: 53px;
+	 z-index:31;
+} 
+
+ #RECEIVEXVR 
+{ 
+	 left: 1041px; 
+	 top: 1131px; 
+	 position: absolute; 
+	 width: 260px;
+	 height: 32px;
+	 z-index:32;
+} 
+
+ #TRANSACTIONS 
+{ 
+	 left: 1845px; 
+	 top: 1130px; 
+	 position: absolute; 
+	 width: 324px;
+	 height: 32px;
+	 z-index:33;
+} 
+
+ #Layer10 
+{ 
+	 left: 1754px; 
+	 top: 1146px; 
+	 position: absolute; 
+	 width: 55px;
+	 height: 31px;
+	 z-index:34;
+} 
+
+ #Layer10copy 
+{ 
+	 left: 1765px; 
+	 top: 1113px; 
+	 position: absolute; 
+	 width: 55px;
+	 height: 31px;
+	 z-index:35;
+} 
+
+ #ADDRESSES 
+{ 
+	 left: 1841px; 
+	 top: 580px; 
+	 position: absolute; 
+	 width: 242px;
+	 height: 32px;
+	 z-index:36;
+} 
+
+ #Layer11copy 
+{ 
+	 left: 1760px; 
+	 top: 564px; 
+	 position: absolute; 
+	 width: 57px;
+	 height: 62px;
+	 z-index:37;
+} 
+
+ #WALLET 
+{ 
+	 left: 344px; 
+	 top: 70px; 
+	 position: absolute; 
+	 width: 208px;
+	 height: 95px;
+	 z-index:38;
+} 
+
+ #Ellipse2 
+{ 
+	 left: 814px; 
+	 top: 674px; 
+	 position: absolute; 
+	 width: 208px;
+	 height: 208px;
+	 z-index:39;
+} 
+
+ #1123749608XVR 
+{ 
+	 left: 144px; 
+	 top: 733px; 
+	 position: absolute; 
+	 width: 832px;
+	 height: 100px;
+	 z-index:40;
+} 
+
+ #RoundedRectangle5 
+{ 
+	 left: 128px; 
+	 top: 1455px; 
+	 position: absolute; 
+	 width: 208px;
+	 height: 83px;
+	 z-index:41;
+} 
+
+ #Send 
+{ 
+	 left: 197px; 
+	 top: 1483px; 
+	 position: absolute; 
+	 width: 71px;
+	 height: 27px;
+	 z-index:42;
+} 
+
+ #RoundedRectangle4 
+{ 
+	 left: 130px; 
+	 top: 1231px; 
+	 position: absolute; 
+	 width: 651px;
+	 height: 80px;
+	 z-index:43;
+} 
+
+ #RoundedRectangle4cop 
+{ 
+	 left: 130px; 
+	 top: 1340px; 
+	 position: absolute; 
+	 width: 651px;
+	 height: 80px;
+	 z-index:44;
+} 
+
+ #EnteravalidXVRaddres 
+{ 
+	 left: 166px; 
+	 top: 1262px; 
+	 position: absolute; 
+	 width: 409px;
+	 height: 23px;
+	 z-index:45;
+} 
+
+ #EnterXVRamounteg1275 
+{ 
+	 left: 166px; 
+	 top: 1370px; 
+	 position: absolute; 
+	 width: 447px;
+	 height: 29px;
+	 z-index:46;
+} 
+
+ #Yourcurrentbalanceis 
+{ 
+	 left: 1694px; 
+	 top: 94px; 
+	 position: absolute; 
+	 width: 793px;
+	 height: 42px;
+	 z-index:47;
+} 
