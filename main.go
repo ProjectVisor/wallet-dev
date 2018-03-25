@@ -6,15 +6,11 @@ import (
 
 	"encoding/json"
 
-	"github.com/asticode/go-astilectron"
-	"github.com/asticode/go-astilectron-bootstrap"
-	"github.com/asticode/go-astilog"
 	"github.com/pkg/errors"
 )
 
 // Constants
-const htmlAbout = `Welcome on <b>Astilectron</b> demo!<br>
-This is using the bootstrap and the bundler.`
+const htmlAbout = `Welcome on <b>Visor</b>`
 
 // Vars
 var (
