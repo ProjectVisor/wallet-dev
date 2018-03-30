@@ -1,83 +1,65 @@
 package main
 
 import (
-	"flag"
+	"github.com/dtylman/gowd"
+
+	"github.com/dtylman/gowd/bootstrap"
 	"time"
-
-	"encoding/json"
-
-	"github.com/pkg/errors"
+	"fmt"
 )
 
-// Constants
-const htmlAbout = `Welcome on <b>Visor</b>`
-
-// Vars
-var (
-	AppName string
-	BuiltAt string
-	debug   = flag.Bool("d", false, "enables the debug mode")
-	w       *astilectron.Window
-)
+var body *gowd.Element
 
 func main() {
-	// Init
-	flag.Parse()
-	astilog.FlagInit()
+	//creates a new bootstrap fluid container
+	body = bootstrap.NewContainer(false)
+	// add some elements using the object model
+	div := bootstrap.NewElement("div", "well")
+	row := bootstrap.NewRow(bootstrap.NewColumn(bootstrap.ColumnLarge, 6, div))
+	body.AddElement(row)
+	// add some other elements from HTML
+	div.AddHTML(`<div class="dropdown">
+	<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+	<span class="caret"></span></button>
+	<ul class="dropdown-menu" id="dropdown-menu">
+	<li><a href="#">HTML</a></li>
+	<li><a href="#">CSS</a></li>
+	<li><a href="#">JavaScript</a></li>
+	</ul>
+	</div>`, nil)
+	// add a button to show a progress bar
+	btn := bootstrap.NewButton(bootstrap.ButtonPrimary, "Start")
+	btn.OnEvent(gowd.OnClick, btnClicked)
+	row.AddElement(bootstrap.NewColumn(bootstrap.ColumnLarge, 4, bootstrap.NewElement("div", "well", btn)))
 
-	// Run bootstrap
-	astilog.Debugf("Running app built at %s", BuiltAt)
-	if err := bootstrap.Run(bootstrap.Options{
-		Asset: Asset,
-		AstilectronOptions: astilectron.Options{
-			AppName:            AppName,
-			AppIconDarwinPath:  "resources/icon.icns",
-			AppIconDefaultPath: "resources/icon.png",
-		},
-		Debug:    *debug,
-		Homepage: "index.html",
-		MenuOptions: []*astilectron.MenuItemOptions{{
-			Label: astilectron.PtrStr("File"),
-			SubMenu: []*astilectron.MenuItemOptions{
-				{
-					Label: astilectron.PtrStr("About"),
-					OnClick: func(e astilectron.Event) (deleteListener bool) {
-						if err := bootstrap.SendMessage(w, "about", htmlAbout, func(m *bootstrap.MessageIn) {
-							// Unmarshal payload
-							var s string
-							if err := json.Unmarshal(m.Payload, &s); err != nil {
-								astilog.Error(errors.Wrap(err, "unmarshaling payload failed"))
-								return
-							}
-							astilog.Infof("About modal has been displayed and payload is %s!", s)
-						}); err != nil {
-							astilog.Error(errors.Wrap(err, "sending about event failed"))
-						}
-						return
-					},
-				},
-				{Role: astilectron.MenuItemRoleClose},
-			},
-		}},
-		OnWait: func(_ *astilectron.Astilectron, iw *astilectron.Window, _ *astilectron.Menu, _ *astilectron.Tray, _ *astilectron.Menu) error {
-			w = iw
-			go func() {
-				time.Sleep(5 * time.Second)
-				if err := bootstrap.SendMessage(w, "check.out.menu", "Don't forget to check out the menu!"); err != nil {
-					astilog.Error(errors.Wrap(err, "sending check.out.menu event failed"))
-				}
-			}()
-			return nil
-		},
-		MessageHandler: handleMessages,
-		RestoreAssets:  RestoreAssets,
-		WindowOptions: &astilectron.WindowOptions{
-			BackgroundColor: astilectron.PtrStr("#333"),
-			Center:          astilectron.PtrBool(true),
-			Height:          astilectron.PtrInt(700),
-			Width:           astilectron.PtrInt(700),
-		},
-	}); err != nil {
-		astilog.Fatal(errors.Wrap(err, "running bootstrap failed"))
+	//start the ui loop
+	gowd.Run(body)
+}
+
+// happens when the 'start' button is clicked
+func btnClicked(sender *gowd.Element, event *gowd.EventElement) {
+	// adds a text and progress bar to the body
+	text := body.AddElement(gowd.NewStyledText("Working...", gowd.BoldText))
+	progressBar := bootstrap.NewProgressBar()
+	body.AddElement(progressBar.Element)
+
+	// makes the body stop responding to user events
+	body.Disable()
+
+	// clean up - remove the added elements
+	defer func() {
+		body.RemoveElement(text)
+		body.RemoveElement(progressBar.Element)
+		body.Enable()
+	}()
+
+	// render the progress bar
+	for i := 0; i <= 123; i++ {
+		progressBar.SetValue(i, 123)
+		text.SetText(fmt.Sprintf("Working %v", i))
+		time.Sleep(time.Millisecond * 20)
+		// this will cause the body to be refreshed
+		body.Render()
 	}
+
 }
